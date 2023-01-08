@@ -1,0 +1,33 @@
+.resource-bar {
+    position: relative;
+}
+
+.resource-bar-sidebar {
+    position: fixed;
+    background-color: rgb(44, 44, 44);
+    border-right: 3px solid black;
+    color: white;
+    width: 15%;
+    height: 100vh;
+    z-index: 20;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+.resource-bar-button {
+    position: fixed;
+    top: 10px;
+    background-color: rgb(44, 44, 44);
+    border: 3px solid black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    z-index: 20;
+}
+
+.resource-bar-button:hover {
+    cursor: pointer;
+    background-color: rgb(54, 54, 54);
+}

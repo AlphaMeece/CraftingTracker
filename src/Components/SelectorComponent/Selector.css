@@ -1,0 +1,22 @@
+.selector-content {
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 10000;
+    background-color: white;
+    min-width: 200px;
+    left: 25%;
+    width: 50%;
+    top: 20vh;
+    min-height: 300px;
+    text-align: center;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.selector-grid {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}

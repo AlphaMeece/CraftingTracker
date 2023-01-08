@@ -1,0 +1,8 @@
+.tree {
+    display: inline-block;
+    min-width: 100%;
+}
+
+.tree > .tree-node:only-child::before, .tree > .tree-node:only-child::after {
+    display: none;
+}

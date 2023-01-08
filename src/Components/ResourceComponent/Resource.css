@@ -1,0 +1,9 @@
+.resource h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.resource input {
+    width: 50px;
+    margin-bottom: 20px;
+}

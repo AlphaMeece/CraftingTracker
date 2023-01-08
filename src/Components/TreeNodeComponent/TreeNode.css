@@ -1,0 +1,213 @@
+.tree-node{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    color: white;
+}
+
+.tree-node::-webkit-scrollbar {
+    display: none;
+}
+
+.tree-node input[type='checkbox']{
+    position: absolute;
+    left: 0;
+}
+
+.tree-node input{
+    width: 75px;
+}
+
+.tree-node-value {
+    position: relative;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    height: 85px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(51, 51, 51);
+}
+
+.tree-node-value button {
+    font-weight: bold;
+}
+
+.tree-node-quantity {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.tree-node-quantity input {
+    width: 50px;
+}
+
+.tree-node::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 50%;
+    height: 20px;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.tree-node::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 50%;
+    height: 20px;
+    border-top: 3px solid black;
+}
+
+.tree-node:first-child::before {
+    border: 0 none;
+}
+.tree-node:first-child::after {
+    border-left: 3px solid black;
+    border-radius: 5px 0 0 0;
+}
+
+.tree-node:last-child::after {
+    border: 0 none;
+}
+.tree-node:last-child::before {
+    border-right: 3px solid black;
+    border-radius: 0 5px 0 0;
+}
+
+.tree-node:only-child::before, .tree-node:only-child::after {
+    border-radius: 0;
+}
+
+.tree-node-children::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 22px;
+    border-right: 3px solid black;
+}
+
+.tree-node-children:empty::before {
+    display: none;
+}
+
+.tree-node .tree-node-value {
+    margin-left: 20px;
+}
+
+.tree-node .tree-node-children {
+    display: flex;
+    flex-direction: row;
+}
+
+.tree-node .tree-node-children .tree-node {
+    flex: 1;
+}
+
+.tree-node-item-name {
+    background-color: #757575;
+    border: 2px solid #000000;
+    text-align: center;
+    border-radius: 100px;
+    margin-top: 15px;
+    cursor: pointer
+}
+
+.tree-node-item-name:hover {
+    color: white;
+    background-color: #555555;
+}
+
+.b-contain *,
+.b-contain *::before,
+.b-contain *::after {
+    box-sizing: content-box !important;
+}
+
+.b-contain input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.b-contain span {
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.b-contain {
+    display: table;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background: rgb(255, 41, 41);
+    transition: background 250ms;
+    border: 1px solid rgb(245, 0, 0);
+    border-radius: 0.2rem;
+}
+
+.b-contain input[type="checkbox"] ~ .b-input::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4.5px;
+    top: 1px;
+    width: 0.24rem;
+    height: 0.48rem;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transition: background 250ms;
+    transform: rotate(45deg);
+}
+
+.b-contain input[type="checkbox"]:disabled ~ .b-input::after {
+    border-color: #ffffff;
+}
+
+.b-contain input:checked ~ .b-input::after {
+    display: block;
+}
+
+.b-contain:hover input[type="checkbox"]:not([disabled]) ~ .b-input,
+.b-contain input[type="checkbox"]:focus ~ .b-input {
+    background: rgb(255, 41, 41);
+    border-color: rgb(245, 0, 0);
+}
+
+.b-contain input:focus ~ .b-input {
+    box-shadow: 0 0 0 2px #60a5fa;
+}
+  
+.b-contain input[type="checkbox"]:checked ~ .b-input {
+    background: rgb(76, 176, 80);
+    border-color: rgb(5, 160, 69);
+}
+
+.b-contain input[type="checkbox"]:disabled ~ .b-input {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.b-contain:hover input[type="checkbox"]:not([disabled]):checked ~ .b-input,
+.b-contain input[type="checkbox"]:checked:focus ~ .b-input {
+    background: rgb(76, 176, 80);
+    border-color: rgb(5, 160, 69);
+}
